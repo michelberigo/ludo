@@ -6,6 +6,7 @@ public class DadoCon {
 	
 	public static DadoCon dado = null; 
 	
+	public final int numFaces = 6;
 	private int valor;
 	private Random rand;
 	
@@ -20,7 +21,7 @@ public class DadoCon {
 	}
 	
 	public int jogar() {
-		valor = rand.nextInt(5) + 1;
+		valor = Math.abs(rand.nextInt()%numFaces) + 1;
 		
 		return valor;
 	}
